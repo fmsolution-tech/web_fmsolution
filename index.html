@@ -3,40 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F&M SOLUTION TECHNOLOGY - Seguridad y Tecnología</title>
+    <title>F&M SOLUTION TECHNOLOGY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f4f4f4; }
-        header { background: #003366; color: white; padding: 30px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .service-card { border: none; padding: 20px; margin: 15px 0; border-radius: 10px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
-        .service-card:hover { transform: translateY(-5px); }
-        h1 { margin: 0; font-size: 2.5em; }
-        .btn-whatsapp { display: inline-block; background: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 10px rgba(37,211,102,0.3); }
+        :root { --primary: #003366; --secondary: #00509d; --accent: #25d366; --text: #333; --light: #f4f4f4; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: var(--light); color: var(--text); line-height: 1.6; }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 3rem 1rem; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .card i { font-size: 2rem; color: var(--secondary); margin-bottom: 1rem; }
+        .card h3 { margin: 0.5rem 0; color: var(--primary); }
+        .cta-section { text-align: center; margin-top: 3rem; padding: 2rem; background: white; border-radius: 12px; }
+        .btn-whatsapp { display: inline-flex; align-items: center; gap: 10px; background-color: var(--accent); color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: 0.3s; }
+        .btn-whatsapp:hover { background-color: #128c7e; transform: scale(1.05); }
     </style>
 </head>
 <body>
     <header>
         <h1>F&M SOLUTION TECHNOLOGY</h1>
-        <p>Soluciones Avanzadas en Seguridad y Sistemas</p>
+        <p>Expertos en Seguridad Electrónica e Infraestructura IT</p>
     </header>
 
-    <section>
-        <div class="service-card">
-            <h3>📹 Seguridad Electrónica y CCTV</h3>
-            <p>Expertos en instalación y mantenimiento de sistemas **DAHUA**, **TVT** y gestión de **DVR**.</p>
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-video"></i>
+                <h3>Seguridad Electrónica</h3>
+                <p>Instalación de cámaras **CCTV**, configuración de **DVR**, soporte en marcas **DAHUA** y **TVT**.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-server"></i>
+                <h3>Infraestructura y Cloud</h3>
+                <p>Administración avanzada de servidores **LINUX** y despliegue de servicios en **AZURE**.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Servicio Técnico Celular</h3>
+                <p>Especialistas en flasheo, desbloqueo y optimización de sistemas Android.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop-medical"></i>
+                <h3>Soporte Técnico PC</h3>
+                <p>Reparación de laptops, PCs de escritorio e instalación de periféricos e impresoras.</p>
+            </div>
         </div>
-        <div class="service-card">
-            <h3>💻 Infraestructura y Soporte IT</h3>
-            <p>Especialistas en servidores **LINUX** y despliegue de soluciones en la nube con **AZURE**.</p>
-        </div>
-        <div class="service-card">
-            <h3>📱 Servicio Técnico Móvil</h3>
-            <p>Flasheo, desbloqueo y optimización profesional de dispositivos Android.</p>
-        </div>
-    </section>
 
-    <div style="text-align: center; margin-top: 40px;">
-        <p>¿Necesitas una cotización para tu negocio en Boca Chica?</p>
-        <a href="https://wa.me/18493501624" class="btn-whatsapp">Contactar por WhatsApp</a>
+        <div class="cta-section">
+            <h2>¿Listo para asegurar tu negocio en Boca Chica?</h2>
+            <p>Hablamos por WhatsApp para darte una cotización personalizada.</p>
+            <a href="https://wa.me/18493501624" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Chat con un Experto
+            </a>
+        </div>
     </div>
 </body>
 </html>
