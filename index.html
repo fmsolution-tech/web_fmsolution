@@ -6,57 +6,82 @@
     <title>F&M SOLUTION TECHNOLOGY</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #003366; --secondary: #00509d; --accent: #25d366; --text: #333; --light: #f4f4f4; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: var(--light); color: var(--text); line-height: 1.6; }
-        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 3rem 1rem; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 5px solid var(--primary); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
-        .card i { font-size: 2rem; color: var(--secondary); margin-bottom: 1rem; }
-        .card h3 { margin: 0.5rem 0; color: var(--primary); }
-        .cta-section { text-align: center; margin-top: 3rem; padding: 2rem; background: white; border-radius: 12px; }
-        .btn-whatsapp { display: inline-flex; align-items: center; gap: 10px; background-color: var(--accent); color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: 0.3s; }
-        .btn-whatsapp:hover { background-color: #128c7e; transform: scale(1.05); }
+        :root { --yellow: #ffeb3b; --blue: #0d47a1; --dark: #212121; --light: #f5f5f5; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); }
+        
+        /* Barra superior negra */
+        nav { background: var(--dark); color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo-nav { height: 40px; }
+
+        /* Banner con Degradado Amarillo a Azul */
+        header { 
+            background: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 30%, var(--blue) 100%);
+            padding: 60px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header-logo { width: 150px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .header-text h1 { font-size: 3rem; margin: 0; }
+
+        /* Grilla de Servicios */
+        .container { max-width: 1100px; margin: -40px auto 40px; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+        .card-top { background: var(--blue); color: white; padding: 20px; font-size: 2rem; }
+        .card-top.dark { background: var(--dark); }
+        .card-body { padding: 20px; }
+        .card-body h3 { margin: 0; color: #333; font-size: 1.1rem; }
+
+        /* Botón WhatsApp */
+        .btn-wa { 
+            position: fixed; bottom: 20px; right: 20px; background: #25d366; 
+            color: white; padding: 15px 25px; border-radius: 50px; 
+            text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 100;
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <img src="https://fmsolution-tech.github.io/web_fmsolution/logo.png" class="logo-nav" alt="Logo">
+        <div>Inicio | Servicios | Contacto</div>
+    </nav>
+
     <header>
-        <h1>F&M SOLUTION TECHNOLOGY</h1>
-        <p>Expertos en Seguridad Electrónica e Infraestructura IT</p>
+        <img src="https://fmsolution-tech.github.io/web_fmsolution/logo.png" class="header-logo" alt="F&M Logo">
+        <div class="header-text">
+            <h1>F&M SOLUTION TECHNOLOGY</h1>
+            <p>Infraestructura IT & Seguridad Electrónica</p>
+        </div>
     </header>
 
     <div class="container">
         <div class="grid">
             <div class="card">
-                <i class="fas fa-video"></i>
-                <h3>Seguridad Electrónica</h3>
-                <p>Instalación de cámaras **CCTV**, configuración de **DVR**, soporte en marcas **DAHUA** y **TVT**.</p>
+                <div class="card-top"><i class="fas fa-video"></i></div>
+                <div class="card-body"><h3>Seguridad Electrónica (CCTV)</h3></div>
             </div>
             <div class="card">
-                <i class="fas fa-server"></i>
-                <h3>Infraestructura y Cloud</h3>
-                <p>Administración avanzada de servidores **LINUX** y despliegue de servicios en **AZURE**.</p>
+                <div class="card-top"><i class="fas fa-server"></i></div>
+                <div class="card-body"><h3>Infraestructura y Cloud (AZURE)</h3></div>
             </div>
             <div class="card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Servicio Técnico Celular</h3>
-                <p>Especialistas en flasheo, desbloqueo y optimización de sistemas Android.</p>
+                <div class="card-top dark"><i class="fas fa-mobile-alt"></i></div>
+                <div class="card-body"><h3>Servicio Técnico Celular</h3></div>
             </div>
             <div class="card">
-                <i class="fas fa-laptop-medical"></i>
-                <h3>Soporte Técnico PC</h3>
-                <p>Reparación de laptops, PCs de escritorio e instalación de periféricos e impresoras.</p>
+                <div class="card-top dark"><i class="fas fa-laptop"></i></div>
+                <div class="card-body"><h3>Soporte Técnico PC</h3></div>
             </div>
-        </div>
-
-        <div class="cta-section">
-            <h2>¿Listo para asegurar tu negocio en Boca Chica?</h2>
-            <p>Hablamos por WhatsApp para darte una cotización personalizada.</p>
-            <a href="https://wa.me/18493501624" class="btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Chat con un Experto
-            </a>
         </div>
     </div>
+
+    <a href="https://wa.me/18493501624" class="btn-wa">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
 </body>
 </html>
