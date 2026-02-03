@@ -5,50 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F&M SOLUTION TECHNOLOGY</title>
     <style>
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: white; }
+        body { margin: 0; font-family: Arial, sans-serif; background-color: #f4f4f4; }
         
+        /* BANNER PRINCIPAL */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('camara.jpg');
+            background: url('camara.jpg') no-repeat center center;
             background-size: cover;
-            background-position: center;
-            height: 450px;
+            height: 300px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 10%;
-            border-bottom: 4px solid #FFD700;
+            padding: 0 50px;
+            border-bottom: 5px solid #FFD700;
         }
-
-        .logo-box img {
-            max-height: 180px;
-            filter: drop-shadow(2px 4px 6px black);
-        }
-
-        .hd-container {
+        .hero img { height: 120px; } /* Tu logo */
+        
+        .hd-box {
+            background: rgba(0, 0, 0, 0.7);
             border: 3px solid #FFD700;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 15px;
+            padding: 15px;
+            border-radius: 10px;
             text-align: center;
-            min-width: 150px;
+            color: #FFD700;
         }
 
-        .hd-title { color: #FFD700; font-size: 4rem; margin: 0; font-weight: bold; line-height: 1; }
-        .hd-subtitle { color: #FFD700; font-size: 1.5rem; margin: 0; letter-spacing: 2px; }
+        /* SERVICIOS (LO QUE SE HABÍA BORRADO) */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .card h3 { color: #003366; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-    <header class="hero">
-        <div class="logo-box">
-            <img src="logo.png" alt="F&M SOLUTION">
+    <section class="hero">
+        <img src="logo.png" alt="F&M Logo">
+        <div class="hd-box">
+            <h1 style="margin:0; font-size: 2.5rem;">HD</h1>
+            <p style="margin:0; font-weight:bold;">1080P</p>
         </div>
+    </section>
 
-        <div class="hd-container">
-            <h1 class="hd-title">HD</h1>
-            <p class="hd-subtitle">1080P</p>
+    <h2 style="text-align:center; margin-top:30px;">Nuestros Servicios</h2>
+    
+    <div class="services-container">
+        <div class="card">
+            <h3>Seguridad Electrónica</h3>
+            <p>CCTV, Alarmas y Control de Acceso.</p>
         </div>
-    </header>
+        <div class="card">
+            <h3>Infraestructura y Cloud</h3>
+            <p>Servidores, Azure y Redes.</p>
+        </div>
+        <div class="card">
+            <h3>Soporte Técnico</h3>
+            <p>Mantenimiento preventivo y correctivo.</p>
+        </div>
+    </div>
 
 </body>
 </html>
