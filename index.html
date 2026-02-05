@@ -5,56 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>F&M SOLUTION TECHNOLOGY | Seguridad IT y Soporte Técnico</title>
-    <meta name="description" content="Expertos en Seguridad Electrónica (CCTV), Infraestructura Cloud Azure, Soporte Técnico de PC y Celulares en Boca Chica y Santo Domingo.">
-    <meta name="keywords" content="CCTV, Reparación de PC, Azure, Soporte Técnico, Boca Chica, F&M Solution">
+    <meta name="description" content="Expertos en Seguridad Electrónica (CCTV), Infraestructura Cloud Azure, Soporte Técnico de PC y Celulares en Santo Domingo, RD.">
     
     <link rel="icon" type="image/png" href="https://fmsolution-tech.github.io/web_fmsolution/logo.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --yellow: #ffeb3b; --blue: #0d47a1; --dark: #212121; --light: #f5f5f5; }
-        html { scroll-behavior: smooth; } /* Hace que el salto del menú sea suave */
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: #333; }
         
-        nav { background: var(--dark); color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        /* Navegación */
+        nav { background: var(--dark); color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
         .logo-nav { height: 40px; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 15px; font-size: 0.9rem; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; font-weight: bold; transition: 0.3s; }
         .nav-links a:hover { color: var(--yellow); }
 
+        /* Header */
         header {
             background: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 30%, var(--blue) 100%);
-            padding: 60px 20px;
+            padding: 80px 20px;
             display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px;
             color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        .header-logo { width: 150px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-        .header-text h1 { font-size: clamp(1.8rem, 5vw, 3rem); margin: 0; }
+        .header-logo { width: 160px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border: 3px solid white; }
+        .header-text h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 0; }
+        .header-text p { font-size: 1.2rem; margin-top: 10px; opacity: 0.9; }
 
-        .container { max-width: 1100px; margin: -40px auto 40px; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
-        .card-top { background: var(--blue); color: white; padding: 20px; font-size: 2rem; }
+        /* Servicios */
+        .container { max-width: 1100px; margin: -50px auto 40px; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); text-align: center; transition: 0.3s; border-bottom: 4px solid transparent; }
+        .card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--blue); }
+        .card-top { background: var(--blue); color: white; padding: 30px; font-size: 2.5rem; }
         .card-top.dark { background: var(--dark); }
-        .card-body { padding: 20px; }
-        .card-body h3 { margin: 0; color: #333; font-size: 1.1rem; }
+        .card-body { padding: 25px; }
+        .card-body h3 { margin: 0; color: var(--dark); font-size: 1.2rem; }
+        .card-body p { font-size: 0.95rem; color: #666; margin-top: 15px; line-height: 1.4; }
 
-        footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        /* Marcas */
+        .brands { max-width: 1100px; margin: 60px auto; padding: 0 20px; text-align: center; }
+        .brands h2 { color: var(--blue); margin-bottom: 40px; }
+        .brands-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; align-items: center; opacity: 0.5; filter: grayscale(100%); }
 
+        /* Footer */
+        footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 60px; }
+        footer a { color: var(--yellow); text-decoration: none; font-weight: bold; }
+        .footer-info { margin-top: 15px; font-size: 0.9rem; opacity: 0.8; }
+
+        /* Botón WhatsApp */
         .btn-wa {
-            position: fixed; bottom: 20px; right: 20px; background: #25d366;
+            position: fixed; bottom: 30px; right: 30px; background: #25d366;
             color: white; padding: 15px 25px; border-radius: 50px;
             text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 100;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s;
+        }
+        .btn-wa:hover { transform: scale(1.1); background: #128c7e; }
+
+        @media (max-width: 768px) {
+            header { padding: 50px 20px; text-align: center; }
+            .nav-links { display: none; } /* Escondemos links en móvil para limpieza */
         }
     </style>
 </head>
 <body>
     <nav>
-        <img src="https://fmsolution-tech.github.io/web_fmsolution/logo.png" class="logo-nav" alt="Logo">
+        <img src="https://fmsolution-tech.github.io/web_fmsolution/logo.png" class="logo-nav" alt="F&M Logo">
         <div class="nav-links">
             <a href="#">Inicio</a>
             <a href="#servicios">Servicios</a>
-            <a href="https://wa.me/18493501624">Contacto</a>
+            <a href="mailto:fmsolutiontechnology@gmail.com"><i class="fas fa-envelope"></i> Email</a>
         </div>
     </nav>
 
@@ -62,59 +82,64 @@
         <img src="https://fmsolution-tech.github.io/web_fmsolution/logo.png" class="header-logo" alt="F&M Logo">
         <div class="header-text">
             <h1>F&M SOLUTION TECHNOLOGY</h1>
-            <p>Infraestructura IT & Seguridad Electrónica</p>
+            <p><i class="fas fa-check-circle"></i> Infraestructura IT & Seguridad Electrónica</p>
         </div>
     </header>
 
     <div class="container" id="servicios">
-<div class="grid">
+        <div class="grid">
             <div class="card">
                 <div class="card-top"><i class="fas fa-video"></i></div>
                 <div class="card-body">
                     <h3>Seguridad Electrónica (CCTV)</h3>
-                    <p style="font-size: 0.9rem; color: #666;">Instalación y configuración de cámaras con monitoreo remoto 24/7.</p>
+                    <p>Instalación y configuración de cámaras con monitoreo remoto 24/7 en tiempo real.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-top"><i class="fas fa-server"></i></div>
                 <div class="card-body">
                     <h3>Infraestructura y Cloud (AZURE)</h3>
-                    <p style="font-size: 0.9rem; color: #666;">Migración a la nube, servidores y redes de alta disponibilidad.</p>
+                    <p>Migración a la nube, administración de servidores y redes de alto rendimiento.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-top dark"><i class="fas fa-mobile-alt"></i></div>
                 <div class="card-body">
                     <h3>Servicio Técnico Celular</h3>
-                    <p style="font-size: 0.9rem; color: #666;">Reparación de pantallas, baterías y software para todas las marcas.</p>
+                    <p>Reparación avanzada de pantallas, baterías y software para todas las marcas líderes.</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-top dark"><i class="fas fa-laptop"></i></div>
                 <div class="card-body">
                     <h3>Soporte Técnico PC</h3>
-                    <p style="font-size: 0.9rem; color: #666;">Mantenimiento preventivo, eliminación de virus y optimización de hardware.</p>
+                    <p>Mantenimiento preventivo, limpieza de virus y repotenciación de hardware para tu laptop o PC.</p>
                 </div>
             </div>
         </div>
-<div style="max-width: 1100px; margin: 40px auto; padding: 0 20px; text-align: center;">
-        <h2 style="color: var(--blue); margin-bottom: 30px;">Marcas que Respaldan nuestras Soluciones</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; align-items: center; opacity: 0.7; filter: grayscale(100%);">
-            <i class="fab fa-microsoft" style="font-size: 3rem;" title="Microsoft Azure"></i>
-            <i class="fas fa-video" style="font-size: 3rem;" title="Hikvision/Dahua"></i>
-            <i class="fab fa-apple" style="font-size: 3rem;" title="Apple Service"></i>
-            <i class="fab fa-windows" style="font-size: 3rem;" title="Windows Support"></i>
-            <i class="fas fa-network-wired" style="font-size: 3rem;" title="Cisco/Ubiquiti"></i>
+    </div>
+
+    <div class="brands">
+        <h2>Marcas que Respaldan nuestras Soluciones</h2>
+        <div class="brands-grid">
+            <i class="fab fa-microsoft" style="font-size: 3.5rem;" title="Microsoft Azure"></i>
+            <i class="fas fa-video" style="font-size: 3.5rem;" title="Hikvision/Dahua"></i>
+            <i class="fab fa-apple" style="font-size: 3.5rem;" title="Apple Service"></i>
+            <i class="fab fa-windows" style="font-size: 3.5rem;" title="Windows Support"></i>
+            <i class="fas fa-network-wired" style="font-size: 3.5rem;" title="Cisco/Ubiquiti"></i>
         </div>
-        <p style="margin-top: 20px; color: #666;">Instalamos y configuramos tecnología de vanguardia.</p>
     </div>
 
     <footer>
         <p>&copy; 2025 F&M Solution Technology - Sto. Dgo, RD</p>
+        <div class="footer-info">
+            <i class="fas fa-envelope"></i> <a href="mailto:fmsolutiontechnology@gmail.com">fmsolutiontechnology@gmail.com</a> | 
+            <i class="fas fa-phone"></i> 849-350-1624
+        </div>
     </footer>
 
-    <a href="https://wa.me/18493501624" class="btn-wa">
-        <i class="fab fa-whatsapp"></i> WhatsApp
+    <a href="https://wa.me/18493501624?text=Hola%20F%26M%20Solution%20Technology,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20deseo%20una%20cotizaci%C3%B3n." class="btn-wa">
+        <i class="fab fa-whatsapp"></i> ¿Cómo podemos ayudarte?
     </a>
 </body>
 </html>
