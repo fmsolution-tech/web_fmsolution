@@ -225,49 +225,49 @@
     </a>
     <style>
     <style>
+    <style>
     .modal-portfolio { 
         display: none; 
         position: fixed; 
-        z-index: 10000; 
+        z-index: 99999; 
         left: 0; top: 0; 
         width: 100%; height: 100%; 
         background-color: rgba(0,0,0,0.9); 
-        overflow-y: auto;
     }
     .modal-content {
-        background-color: white;
+        background-color: #fff;
         margin: 5% auto;
-        padding: 30px; /* Más espacio */
-        width: 85%;
+        padding: 20px;
+        width: 80%;
         max-width: 600px;
-        border-radius: 15px;
+        border-radius: 12px;
         position: relative;
         text-align: center;
+        color: #333;
     }
-    /* ESTA ES LA X QUE TIENES QUE ARREGLAR */
     .close-modal {
         position: absolute;
         top: 10px;
         right: 15px;
-        font-size: 40px; /* Más grande */
+        font-size: 35px;
         font-weight: bold;
-        color: #ff0000; /* Color Rojo para que se vea claro */
         cursor: pointer;
-        line-height: 1;
+        color: #ff0000; /* Roja para que se vea sí o sí */
+        z-index: 10001;
     }
-    .modal-content img { 
-        width: 100%; 
-        max-height: 400px; /* Para que no ocupe toda la pantalla hacia abajo */
-        object-fit: cover;
-        border-radius: 10px; 
+    .modal-img {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 15px;
+        border: 1px solid #ddd;
     }
 </style>
 
 <div id="modalCCTV" class="modal-portfolio">
     <div class="modal-content">
         <span class="close-modal" onclick="document.getElementById('modalCCTV').style.display='none'">&times;</span>
-        <h2>Proyectos de CCTV</h2>
-        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600" alt="CCTV">
+        <h2>Proyectos CCTV</h2>
+        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600" class="modal-img">
     </div>
 </div>
 
@@ -275,7 +275,7 @@
     <div class="modal-content">
         <span class="close-modal" onclick="document.getElementById('modalCelulares').style.display='none'">&times;</span>
         <h2>Reparación de Celulares</h2>
-        <img src="https://images.unsplash.com/photo-1512054813130-f3830fe441b6?w=600" alt="Celulares">
+        <img src="https://images.unsplash.com/photo-1512054813130-f3830fe441b6?w=600" class="modal-img">
     </div>
 </div>
 
@@ -283,23 +283,23 @@
     <div class="modal-content">
         <span class="close-modal" onclick="document.getElementById('modalSoporte').style.display='none'">&times;</span>
         <h2>Soporte Técnico PC</h2>
-        <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?w=600" alt="Soporte">
+        <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?w=600" class="modal-img">
     </div>
 </div>
 
 <div id="modalWeb" class="modal-portfolio">
     <div class="modal-content">
         <span class="close-modal" onclick="document.getElementById('modalWeb').style.display='none'">&times;</span>
-        <h2>Diseño Web</h2>
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Web">
+        <h2>Diseño de Páginas Web</h2>
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" class="modal-img">
     </div>
 </div>
 
 <div id="modalInfra" class="modal-portfolio">
     <div class="modal-content">
         <span class="close-modal" onclick="document.getElementById('modalInfra').style.display='none'">&times;</span>
-        <h2>Infraestructura y Redes</h2>
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc4b?w=600" alt="Infraestructura">
+        <h2>Infraestructura de Red</h2>
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc4b?w=600" class="modal-img">
     </div>
 </div>
 </body>
