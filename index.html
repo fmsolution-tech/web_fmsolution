@@ -224,6 +224,7 @@
         <i class="fab fa-whatsapp"></i> ¿Cómo podemos ayudarte?
     </a>
     <style>
+    <style>
     .modal-portfolio { 
         display: none; 
         position: fixed; 
@@ -236,26 +237,30 @@
     .modal-content {
         background-color: white;
         margin: 5% auto;
-        padding: 25px;
+        padding: 30px; /* Más espacio */
         width: 85%;
-        max-width: 650px;
+        max-width: 600px;
         border-radius: 15px;
         position: relative;
         text-align: center;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
-    .modal-content h2 { color: #333; margin-bottom: 15px; font-family: sans-serif; }
-    .modal-content img { width: 100%; border-radius: 10px; margin-top: 10px; }
+    /* ESTA ES LA X QUE TIENES QUE ARREGLAR */
     .close-modal {
         position: absolute;
         top: 10px;
-        right: 20px;
-        font-size: 35px;
+        right: 15px;
+        font-size: 40px; /* Más grande */
         font-weight: bold;
+        color: #ff0000; /* Color Rojo para que se vea claro */
         cursor: pointer;
-        color: #666;
+        line-height: 1;
     }
-    .close-modal:hover { color: #000; }
+    .modal-content img { 
+        width: 100%; 
+        max-height: 400px; /* Para que no ocupe toda la pantalla hacia abajo */
+        object-fit: cover;
+        border-radius: 10px; 
+    }
 </style>
 
 <div id="modalCCTV" class="modal-portfolio">
