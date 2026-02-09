@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-<title>F&M SOLUTION TECHNOLOGY | Seguridad IT y Soporte Técnico en República Dominicana</title>
-    <meta name="description" content="Servicios profesionales con cobertura nacional en República Dominicana: Instalación de cámaras CCTV, soporte técnico de PC y celulares, e infraestructura Cloud Azure.">
-    <meta name="keywords" content="CCTV República Dominicana, Cámaras de seguridad RD, Reparación de PC, Soporte Técnico Dominicano, Azure RD, F&M Solution Tech, Seguridad Electrónica Dominicana">
-
+    <title>F&M SOLUTION TECHNOLOGY | Seguridad IT y Soporte Técnico RD</title>
+    <meta name="description" content="Servicios profesionales en República Dominicana: CCTV, soporte técnico PC/Celulares e infraestructura Cloud Azure.">
     <link rel="icon" type="image/png" href="https://fmsolution-tech.github.io/web_fmsolution/logo.png">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root { --yellow: #ffeb3b; --blue: #0d47a1; --dark: #212121; --light: #f5f5f5; }
         html { scroll-behavior: smooth; }
@@ -33,10 +30,12 @@
         .header-text h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 0; }
         .header-text p { font-size: 1.2rem; margin-top: 10px; opacity: 0.9; }
 
-        /* Servicios */
-        .container { max-width: 1100px; margin: -50px auto 40px; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); text-align: center; transition: 0.3s; border-bottom: 4px solid transparent; }
+        /* Servicios - Ajuste de Margen para que no choquen */
+        .services-section { padding: 60px 0; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: -50px; }
+        
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1); text-align: center; transition: 0.3s; border-bottom: 4px solid transparent; cursor: pointer; }
         .card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--blue); }
         .card-top { background: var(--blue); color: white; padding: 30px; font-size: 2.5rem; }
         .card-top.dark { background: var(--dark); }
@@ -44,39 +43,32 @@
         .card-body h3 { margin: 0; color: var(--dark); font-size: 1.2rem; }
         .card-body p { font-size: 0.95rem; color: #666; margin-top: 15px; line-height: 1.4; }
 
-        /* Marcas */
+        /* Modales */
+        .modal-portfolio { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; }
+        .modal-content { background: white; margin: 5% auto; padding: 25px; width: 85%; max-width: 550px; border-radius: 15px; position: relative; text-align: center; }
+        .close-btn { position: absolute; top: 10px; right: 20px; font-size: 40px; color: #ff0000; cursor: pointer; font-weight: bold; }
+        .modal-content img { width: 100%; border-radius: 10px; margin-top: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        /* Marcas y Footer */
         .brands { max-width: 1100px; margin: 60px auto; padding: 0 20px; text-align: center; }
-        .brands h2 { color: var(--blue); margin-bottom: 40px; }
-        .brands-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; align-items: center; opacity: 0.5; filter: grayscale(100%); }
-
-        /* Footer */
+        .brands-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; align-items: center; }
         footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; margin-top: 60px; }
-        footer a { color: var(--yellow); text-decoration: none; font-weight: bold; }
-        .footer-info { margin-top: 15px; font-size: 0.9rem; opacity: 0.8; }
+        footer a { color: var(--yellow); text-decoration: none; }
+        .btn-wa { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px; box-shadow: 0 8px 15px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s; }
+        .btn-wa:hover { transform: scale(1.1); }
 
-        /* Botón WhatsApp */
-        .btn-wa {
-            position: fixed; bottom: 30px; right: 30px; background: #25d366;
-            color: white; padding: 15px 25px; border-radius: 50px;
-            text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s;
-        }
-        .btn-wa:hover { transform: scale(1.1); background: #128c7e; }
-
-        @media (max-width: 768px) {
-            header { padding: 50px 20px; text-align: center; }
-            .nav-links { display: none; } /* Escondemos links en móvil para limpieza */
-        }
+        @media (max-width: 768px) { .nav-links { display: none; } }
     </style>
 </head>
 <body>
+
     <nav>
         <img src="https://fmsolution-tech.github.io/web_fmsolution/logo.png" class="logo-nav" alt="F&M Logo">
-      <div class="nav-links">
-    <a href="#">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="https://www.facebook.com/FM-Solution-102677914707564" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-</div>
+        <div class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="https://www.facebook.com/FM-Solution-102677914707564" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
     </nav>
 
     <header>
@@ -87,143 +79,113 @@
         </div>
     </header>
 
-    <div class="container" id="servicios">
-        <div class="grid">
-
-
-
-            <div class="card">
-                
-                <div class="card-top"><i class="fas fa-video"></i></div>
-                <div class="card-body">
-                    <h3>Seguridad Electrónica (CCTV)</h3>
-                    <p>Instalación y configuración de cámaras con monitoreo remoto 24/7 en tiempo real.</p>
+    <div class="services-section" id="servicios">
+        <div class="container">
+            <div class="grid">
+                <div class="card" onclick="document.getElementById('modalCCTV').style.display='block'">
+                    <div class="card-top"><i class="fas fa-video"></i></div>
+                    <div class="card-body">
+                        <h3>Seguridad Electrónica (CCTV)</h3>
+                        <p>Instalación y configuración de cámaras con monitoreo remoto 24/7 en tiempo real.</p>
+                    </div>
                 </div>
-            </div>
-
-
-
-            <div class="card">
-                <div class="card-top"><i class="fas fa-server"></i></div>
-                <div class="card-body">
-                    <h3>Infraestructura y Cloud (AZURE)</h3>
-                    <p>Migración a la nube, administración de servidores y redes de alto rendimiento.</p>
+                <div class="card" onclick="document.getElementById('modalAzure').style.display='block'">
+                    <div class="card-top"><i class="fas fa-server"></i></div>
+                    <div class="card-body">
+                        <h3>Infraestructura y Cloud (AZURE)</h3>
+                        <p>Migración a la nube, administración de servidores y redes de alto rendimiento.</p>
+                    </div>
                 </div>
-            </div>
-
-
-
-            <div class="card">
-                <div class="card-top dark"><i class="fas fa-mobile-alt"></i></div>
-                <div class="card-body">
-                    <h3>Servicio Técnico Celular</h3>
-                    <p>Reparación avanzada de pantallas, baterías y software para todas las marcas líderes.</p>
+                <div class="card" onclick="document.getElementById('modalCelular').style.display='block'">
+                    <div class="card-top dark"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="card-body">
+                        <h3>Servicio Técnico Celular</h3>
+                        <p>Reparación avanzada de pantallas, baterías y software para marcas líderes.</p>
+                    </div>
                 </div>
-            </div>
-
-
-            
-            <div class="card">
-                <div class="card-top dark"><i class="fas fa-laptop"></i></div>
-                <div class="card-body">
-                    <h3>Soporte Técnico PC</h3>
-                    <p>Mantenimiento preventivo, limpieza de virus y repotenciación de hardware para tu laptop o PC.</p>
+                <div class="card" onclick="document.getElementById('modalPC').style.display='block'">
+                    <div class="card-top dark"><i class="fas fa-laptop"></i></div>
+                    <div class="card-body">
+                        <h3>Soporte Técnico PC</h3>
+                        <p>Mantenimiento preventivo, limpieza de virus y repotenciación de hardware.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-<section id="proyectos" style="max-width: 1100px; margin: 40px auto; padding: 40px 20px; background: #fff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+
+    <section id="proyectos" style="max-width: 1100px; margin: 40px auto; padding: 40px 20px; background: #fff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
         <h2 style="text-align: center; color: var(--blue); margin-bottom: 10px; font-size: 2rem;">Nuestros Proyectos Reales</h2>
-        <p style="text-align: center; margin-bottom: 30px; color: #666;">Evidencia real de nuestras instalaciones y servicios a nivel nacional.</p>
-        
+        <p style="text-align: center; margin-bottom: 30px; color: #666;">Evidencia real de nuestras instalaciones a nivel nacional.</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-            
             <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=500" alt="Instalación de Cámaras RD" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=500" style="width: 100%; height: 250px; object-fit: cover; display: block;">
                 <div style="padding: 15px; background: white; text-align: center; font-weight: bold; color: var(--blue);">Seguridad Electrónica / CCTV</div>
             </div>
-
             <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=500" alt="Soporte Técnico PC" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+                <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?w=500" style="width: 100%; height: 250px; object-fit: cover; display: block;">
                 <div style="padding: 15px; background: white; text-align: center; font-weight: bold; color: var(--blue);">Infraestructura & Soporte PC</div>
             </div>
-
             <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=500" alt="Reparación de Celulares" style="width: 100%; height: 250px; object-fit: cover; display: block;">
+                <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=500" style="width: 100%; height: 250px; object-fit: cover; display: block;">
                 <div style="padding: 15px; background: white; text-align: center; font-weight: bold; color: var(--blue);">Laboratorio de Celulares</div>
             </div>
-
-        </div>
-        
-        <div style="text-align: center; margin-top: 30px;">
-            <a href="https://www.facebook.com/FM-Solution-102677914707564" target="_blank" style="display: inline-block; background: var(--blue); color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: bold;">
-                <i class="fab fa-facebook"></i> Ver galería completa en Facebook
-            </a>
         </div>
     </section>
 
-<div class="brands">
+    <div class="brands">
         <h2>Nuestro Compromiso Profesional</h2>
-        <div class="brands-grid" style="opacity: 1; filter: none; color: var(--blue);">
-            <div style="flex: 1; min-width: 200px;">
-                <i class="fas fa-shield-alt" style="font-size: 3rem; margin-bottom: 10px;"></i>
-                <h4>Seguridad Garantizada</h4>
-                <p style="font-size: 0.9rem; color: #666;">Protocolos de alta seguridad en cada instalación.</p>
-            </div>
-            <div style="flex: 1; min-width: 200px;">
-                <i class="fas fa-microchip" style="font-size: 3rem; margin-bottom: 10px;"></i>
-                <h4>Tecnología de Punta</h4>
-                <p style="font-size: 0.9rem; color: #666;">Equipos de última generación con alto rendimiento.</p>
-            </div>
-            <div style="flex: 1; min-width: 200px;">
-                <i class="fas fa-user-check" style="font-size: 3rem; margin-bottom: 10px;"></i>
-                <h4>Soporte Experto</h4>
-                <p style="font-size: 0.9rem; color: #666;">Personal capacitado para asistencia técnica inmediata.</p>
-            </div>
+        <div class="brands-grid" style="color: var(--blue);">
+            <div style="flex: 1; min-width: 200px;"><i class="fas fa-shield-alt" style="font-size: 3rem; margin-bottom: 10px;"></i><h4>Seguridad Garantizada</h4></div>
+            <div style="flex: 1; min-width: 200px;"><i class="fas fa-microchip" style="font-size: 3rem; margin-bottom: 10px;"></i><h4>Tecnología de Punta</h4></div>
+            <div style="flex: 1; min-width: 200px;"><i class="fas fa-user-check" style="font-size: 3rem; margin-bottom: 10px;"></i><h4>Soporte Experto</h4></div>
         </div>
     </div>
-<section style="background: white; padding: 40px 20px; text-align: center; border-top: 1px solid #ddd;">
-    <h3>Conoce nuestros trabajos recientes</h3>
-    <p>Síguenos en Facebook para ver fotos de nuestras instalaciones.</p>
-    <a href="https://www.facebook.com/FM-Solution-102677914707564" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: #1877f2; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-        <i class="fab fa-facebook"></i> Visitar F&M en Facebook
-    </a>
-</section>
-<section style="background: #f0f2f5; padding: 60px 20px; text-align: center;">
-    <h2 style="color: var(--blue); margin-bottom: 40px;">Lo Que Dicen Nuestros Clientes</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto;">
-        
-        <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); position: relative;">
-            <i class="fas fa-quote-left" style="color: var(--yellow); font-size: 2rem; position: absolute; top: 20px; left: 20px; opacity: 0.2;"></i>
-            <p style="font-style: italic; color: #555; margin-bottom: 20px;">"Excelente servicio. Instalaron las cámaras en mi negocio y la configuración en el celular quedó perfecta. Muy profesionales."</p>
-            <h4 style="margin: 0; color: var(--dark);">Cliente Satisfecho</h4>
-            <div style="color: var(--yellow); margin-top: 5px;">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-        </div>
 
-        <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); position: relative;">
-            <i class="fas fa-quote-left" style="color: var(--yellow); font-size: 2rem; position: absolute; top: 20px; left: 20px; opacity: 0.2;"></i>
-            <p style="font-style: italic; color: #555; margin-bottom: 20px;">"Mi laptop estaba muy lenta y en F&M la dejaron como nueva. El soporte técnico es rápido y confiable. Recomendados 100%."</p>
-            <h4 style="margin: 0; color: var(--dark);">Usuario de Soporte PC</h4>
-            <div style="color: var(--yellow); margin-top: 5px;">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
+    <div id="modalCCTV" class="modal-portfolio">
+        <div class="modal-content">
+            <span class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">&times;</span>
+            <h2 style="color:var(--blue)">Portafolio CCTV</h2>
+            <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600">
+            <p>Sistemas avanzados de vigilancia para hogares y empresas.</p>
         </div>
-
     </div>
-</section>
-<footer>
-    <p>&copy; 2025 F&M Solution Technology - Cobertura Nacional, República Dominicana</p>
-    </footer>
-            <div class="footer-info">
+    <div id="modalAzure" class="modal-portfolio">
+        <div class="modal-content">
+            <span class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">&times;</span>
+            <h2 style="color:var(--blue)">Cloud & Azure</h2>
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc4b?w=600">
+            <p>Administración de servidores y soluciones en la nube.</p>
+        </div>
+    </div>
+    <div id="modalCelular" class="modal-portfolio">
+        <div class="modal-content">
+            <span class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">&times;</span>
+            <h2 style="color:var(--blue)">Reparación Celular</h2>
+            <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=600">
+            <p>Servicio técnico profesional para todas las marcas.</p>
+        </div>
+    </div>
+    <div id="modalPC" class="modal-portfolio">
+        <div class="modal-content">
+            <span class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">&times;</span>
+            <h2 style="color:var(--blue)">Soporte Técnico PC</h2>
+            <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?w=600">
+            <p>Mantenimiento y repotenciación de equipos informáticos.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 F&M Solution Technology - República Dominicana</p>
+        <div class="footer-info">
             <i class="fas fa-envelope"></i> <a href="mailto:fmsolutiontechnology@gmail.com">fmsolutiontechnology@gmail.com</a> | 
             <i class="fas fa-phone"></i> 849-350-1624
         </div>
     </footer>
 
-    <a href="https://wa.me/18493501624?text=Hola%20F%26M%20Solution%20Technology,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20deseo%20una%20cotizaci%C3%B3n." class="btn-wa">
+    <a href="https://wa.me/18493501624" class="btn-wa">
         <i class="fab fa-whatsapp"></i> ¿Cómo podemos ayudarte?
     </a>
+
 </body>
 </html>
