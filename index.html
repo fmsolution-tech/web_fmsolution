@@ -89,47 +89,36 @@
 
     <div class="container" id="servicios">
         <div class="grid">
-            <div class="grid">
-    <div class="card" onclick="document.getElementById('modalCCTV').style.display='block'" style="cursor: pointer;">
-        <div class="card-top"><i class="fas fa-video"></i></div>
-        <div class="card-body">
-            <h3>Seguridad Electrónica (CCTV)</h3>
-            <p>Instalación y configuración de cámaras con monitoreo remoto 24/7 en tiempo real.</p>
+            <div class="card">
+                <div class="card-top"><i class="fas fa-video"></i></div>
+                <div class="card-body">
+                    <h3>Seguridad Electrónica (CCTV)</h3>
+                    <p>Instalación y configuración de cámaras con monitoreo remoto 24/7 en tiempo real.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-top"><i class="fas fa-server"></i></div>
+                <div class="card-body">
+                    <h3>Infraestructura y Cloud (AZURE)</h3>
+                    <p>Migración a la nube, administración de servidores y redes de alto rendimiento.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-top dark"><i class="fas fa-mobile-alt"></i></div>
+                <div class="card-body">
+                    <h3>Servicio Técnico Celular</h3>
+                    <p>Reparación avanzada de pantallas, baterías y software para todas las marcas líderes.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-top dark"><i class="fas fa-laptop"></i></div>
+                <div class="card-body">
+                    <h3>Soporte Técnico PC</h3>
+                    <p>Mantenimiento preventivo, limpieza de virus y repotenciación de hardware para tu laptop o PC.</p>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="card" onclick="document.getElementById('modalCelulares').style.display='block'" style="cursor: pointer;">
-        <div class="card-top"><i class="fas fa-mobile-alt"></i></div>
-        <div class="card-body">
-            <h3>Reparación de Celulares</h3>
-            <p>Servicio técnico especializado en hardware y software para dispositivos móviles.</p>
-        </div>
-    </div>
-
-    <div class="card" onclick="document.getElementById('modalSoporte').style.display='block'" style="cursor: pointer;">
-        <div class="card-top"><i class="fas fa-laptop-code"></i></div>
-        <div class="card-body">
-            <h3>Soporte Técnico PC</h3>
-            <p>Mantenimiento preventivo y correctivo de computadoras y laptops.</p>
-        </div>
-    </div>
-
-    <div class="card" onclick="document.getElementById('modalWeb').style.display='block'" style="cursor: pointer;">
-        <div class="card-top"><i class="fas fa-code"></i></div>
-        <div class="card-body">
-            <h3>Diseño de Páginas Web</h3>
-            <p>Creación de sitios web modernos, rápidos y adaptables a todos los dispositivos.</p>
-        </div>
-    </div>
-
-    <div class="card" onclick="document.getElementById('modalInfra').style.display='block'" style="cursor: pointer;">
-        <div class="card-top"><i class="fas fa-network-wired"></i></div>
-        <div class="card-body">
-            <h3>Infraestructura y Redes</h3>
-            <p>Diseño e implementación de cableado estructurado y redes de datos empresariales.</p>
-        </div>
-    </div>
-</div>
 <section id="proyectos" style="max-width: 1100px; margin: 40px auto; padding: 40px 20px; background: #fff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
         <h2 style="text-align: center; color: var(--blue); margin-bottom: 10px; font-size: 2rem;">Nuestros Proyectos Reales</h2>
         <p style="text-align: center; margin-bottom: 30px; color: #666;">Evidencia real de nuestras instalaciones y servicios a nivel nacional.</p>
@@ -223,84 +212,5 @@
     <a href="https://wa.me/18493501624?text=Hola%20F%26M%20Solution%20Technology,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20deseo%20una%20cotizaci%C3%B3n." class="btn-wa">
         <i class="fab fa-whatsapp"></i> ¿Cómo podemos ayudarte?
     </a>
-    <style>
-    <style>
-    <style>
-    .modal-portfolio { 
-        display: none; 
-        position: fixed; 
-        z-index: 99999; 
-        left: 0; top: 0; 
-        width: 100%; height: 100%; 
-        background-color: rgba(0,0,0,0.9); 
-    }
-    .modal-content {
-        background-color: #fff;
-        margin: 5% auto;
-        padding: 20px;
-        width: 80%;
-        max-width: 600px;
-        border-radius: 12px;
-        position: relative;
-        text-align: center;
-        color: #333;
-    }
-    .close-modal {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        font-size: 35px;
-        font-weight: bold;
-        cursor: pointer;
-        color: #ff0000; /* Roja para que se vea sí o sí */
-        z-index: 10001;
-    }
-    .modal-img {
-        width: 100%;
-        border-radius: 8px;
-        margin-top: 15px;
-        border: 1px solid #ddd;
-    }
-</style>
-
-<div id="modalCCTV" class="modal-portfolio">
-    <div class="modal-content">
-        <span class="close-modal" onclick="document.getElementById('modalCCTV').style.display='none'">&times;</span>
-        <h2>Proyectos CCTV</h2>
-        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600" class="modal-img">
-    </div>
-</div>
-
-<div id="modalCelulares" class="modal-portfolio">
-    <div class="modal-content">
-        <span class="close-modal" onclick="document.getElementById('modalCelulares').style.display='none'">&times;</span>
-        <h2>Reparación de Celulares</h2>
-        <img src="https://images.unsplash.com/photo-1512054813130-f3830fe441b6?w=600" class="modal-img">
-    </div>
-</div>
-
-<div id="modalSoporte" class="modal-portfolio">
-    <div class="modal-content">
-        <span class="close-modal" onclick="document.getElementById('modalSoporte').style.display='none'">&times;</span>
-        <h2>Soporte Técnico PC</h2>
-        <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?w=600" class="modal-img">
-    </div>
-</div>
-
-<div id="modalWeb" class="modal-portfolio">
-    <div class="modal-content">
-        <span class="close-modal" onclick="document.getElementById('modalWeb').style.display='none'">&times;</span>
-        <h2>Diseño de Páginas Web</h2>
-        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" class="modal-img">
-    </div>
-</div>
-
-<div id="modalInfra" class="modal-portfolio">
-    <div class="modal-content">
-        <span class="close-modal" onclick="document.getElementById('modalInfra').style.display='none'">&times;</span>
-        <h2>Infraestructura de Red</h2>
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc4b?w=600" class="modal-img">
-    </div>
-</div>
 </body>
 </html>
