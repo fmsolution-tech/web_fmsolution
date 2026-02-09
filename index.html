@@ -70,7 +70,7 @@
     </style>
 </head>
 <body>
-    
+
     <nav>
         <img src="https://fmsolution-tech.github.io/web_fmsolution/logo.png" class="logo-nav" alt="F&M Logo">
       <div class="nav-links">
@@ -87,37 +87,30 @@
             <p><i class="fas fa-check-circle"></i> Infraestructura IT & Seguridad Electrónica</p>
         </div>
     </header>
-
+    
     <div class="container" id="servicios">
-        <div class="grid">
-            <div class="card">
-                <div class="card-top"><i class="fas fa-video"></i></div>
-                <div class="card-body">
-                    <h3>Seguridad Electrónica (CCTV)</h3>
-                    <p>Instalación y configuración de cámaras con monitoreo remoto 24/7 en tiempo real.</p>
-                </div>
+    <div class="grid">
+        
+        <div class="card" onclick="document.getElementById('modalCCTV').style.display='block'" style="cursor: pointer;">
+            <div class="card-top"><i class="fas fa-video"></i></div>
+            <div class="card-body">
+                <h3>Seguridad Electrónica (CCTV)</h3>
+                <p>Instalación y configuración de cámaras con monitoreo remoto 24/7 en tiempo real.</p>
+                <small style="color: #007bff;">Click para ver galería</small>
             </div>
-            <div class="card">
-                <div class="card-top"><i class="fas fa-server"></i></div>
-                <div class="card-body">
-                    <h3>Infraestructura y Cloud (AZURE)</h3>
-                    <p>Migración a la nube, administración de servidores y redes de alto rendimiento.</p>
-                </div>
+        </div>
+
+        <div class="card" onclick="document.getElementById('modalCelulares').style.display='block'" style="cursor: pointer;">
+            <div class="card-top"><i class="fas fa-mobile-alt"></i></div>
+            <div class="card-body">
+                <h3>Reparación de Celulares</h3>
+                <p>Servicio técnico especializado en hardware y software para dispositivos móviles.</p>
+                <small style="color: #007bff;">Click para ver galería</small>
             </div>
-            <div class="card">
-                <div class="card-top dark"><i class="fas fa-mobile-alt"></i></div>
-                <div class="card-body">
-                    <h3>Servicio Técnico Celular</h3>
-                    <p>Reparación avanzada de pantallas, baterías y software para todas las marcas líderes.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-top dark"><i class="fas fa-laptop"></i></div>
-                <div class="card-body">
-                    <h3>Soporte Técnico PC</h3>
-                    <p>Mantenimiento preventivo, limpieza de virus y repotenciación de hardware para tu laptop o PC.</p>
-                </div>
-            </div>
+        </div>
+
+    </div>
+</div>
         </div>
     </div>
 <section id="proyectos" style="max-width: 1100px; margin: 40px auto; padding: 40px 20px; background: #fff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
