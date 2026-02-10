@@ -176,14 +176,34 @@
     <footer>
         <p>&copy; 2026 F&M Solution Technology - República Dominicana</p>
         <div class="footer-info">
-            <i class="fas fa-envelope"></i> <a href="mailto:fmsolutiontechnology@gmail.com">fmsolutiontechnology@gmail.com</a> | 
-            <i class="fas fa-phone"></i> 849-350-1624
-        </div>
+    <i class="fas fa-envelope"></i> 
+    <span id="email-protector" style="cursor:pointer; color:var(--yellow); text-decoration:underline;">
+        Cargando correo...
+    </span> | 
+    <i class="fas fa-phone"></i> 849-350-1624
+</div>
     </footer>
 
     <a href="https://wa.me/18493501624" class="btn-wa">
         <i class="fab fa-whatsapp"></i> ¿Cómo podemos ayudarte?
     </a>
+
+    <script>
+    // Esto arma el correo solo cuando la página carga, los bots no lo verán fácilmente
+    window.onload = function() {
+        setTimeout(function() {
+            var user = "fmsolutiontechnology";
+            var domain = "gmail.com";
+            var element = document.getElementById("email-protector");
+            var fullEmail = user + "@" + domain;
+            
+            element.innerHTML = fullEmail;
+            element.onclick = function() {
+                window.location.href = "mailto:" + fullEmail;
+            };
+        }, 1000); // Se activa 1 segundo después de cargar
+    };
+</script>
 
 </body>
 </html>
